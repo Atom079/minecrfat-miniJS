@@ -12,16 +12,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function loader(loaderSelector){
-    const loader = document.querySelector(loaderSelector)
-    setTimeout(()=>{
-        loader.style.opacity = '0'
-        setTimeout(()=>{
-            loader.style.display = 'none'
-        }, 500)
-    }, 2000)
+function loader(loaderSelector) {
+  const loader = document.querySelector(loaderSelector);
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
+  }, 2000);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loader);
+
 
 /***/ })
 
