@@ -14,11 +14,21 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+section{
+  flex-direction: column;
+  min-height: 100vh;
+}
+.section-title{
+  padding: 1rem 0;
+  text-align: center;
+  color: #000137;
+  font-size: 3rem;
+  font-weight: 700;
+}
 /* Loader section styles */
 .loader {
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -50,7 +60,6 @@ body {
 /* //Loader section styles */
 /* Home section styles */
 .home {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +104,6 @@ body {
 /* //Home section styles */
 /* Tab section styles */
 .tabheader {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,6 +157,70 @@ body {
   background-position: center;
 }
 /* //Tab section styles */
+/* Slider section styles */
+.main-slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-top{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  background-color: #000137;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.current{
+  margin-left: 1rem;
+}
+.total{
+  margin-right: 1rem;
+}
+.slider-top i{
+  cursor: pointer;
+}
+.slider-top .main-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+.slide:nth-child(1){
+  background-image: url("../imgs/main_img1.png");
+}
+.slide:nth-child(2){
+  background-image: url("../imgs/main_img2.jpg");
+}
+.slide:nth-child(3){
+  background-image: url("../imgs/main_img3.jpg");
+}
+.slide:nth-child(4){
+  background-image: url("../imgs/main_img4.jpg");
+}
+.slide:nth-child(5){
+  background-image: url("../imgs/main_img5.jpg");
+}
+.slide:nth-child(6){
+  background-image: url("../imgs/main_img6.jpg");
+}
+.slide{
+  min-height: 70vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.slide .text{
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.3);
+}
+/* //Slider section styles */
 /* Javascript styles */
 .show {
   display: block;
