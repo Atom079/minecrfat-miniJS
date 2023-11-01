@@ -1,0 +1,26 @@
+{
+  "menu": [
+    {
+      "src": "./imgs/main_img4.jpg",
+      "altimg": "dungeons",
+      "title": "Dungeons",
+      "descr": "1.10.33 of \"de F inibus Bonorum et Malorum\" (The Extremes ofGood and Evil) by Cicero, written in 45 BC. This boo",
+      "price": 11
+    },
+    {
+      "src": "./imgs/main_img5.jpg",
+      "altimg": "caves",
+      "title": "Caves",
+      "descr": "1.10.33 of \"de F inibus Bonorum et Malorum\" (The Extremes ofGood and Evil) by Cicero, written in 45 BC. This boo",
+      "price": 23
+    },
+    {
+      "src": "./imgs/main_img2.jpg",
+      "altimg": "villages",
+      "title": "Villages",
+      "descr": "1.10.33 of \"de F inibus Bonorum et Malorum\" (The Extremes ofGood and Evil) by Cicero, written in 45 BC. This boo",
+      "price": 30
+    }
+  ],
+  "request": []
+}

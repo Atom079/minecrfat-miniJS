@@ -17,6 +17,9 @@ body {
 section {
   flex-direction: column;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-title {
   padding: 1rem 0;
@@ -25,14 +28,15 @@ section {
   font-size: 3rem;
   font-weight: 700;
 }
+img {
+  width: 100%;
+  display: block;
+}
 /* Loader section styles */
 .loader {
   overflow: hidden;
   width: 100vw;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -59,11 +63,6 @@ section {
 }
 /* //Loader section styles */
 /* Home section styles */
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .home_content {
   display: flex;
   justify-content: space-between;
@@ -103,11 +102,6 @@ section {
 }
 /* //Home section styles */
 /* Tab section styles */
-.tabheader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .tabheader_content {
   display: flex;
   justify-content: center;
@@ -158,11 +152,6 @@ section {
 }
 /* //Tab section styles */
 /* Slider section styles */
-.main-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .slider-top {
   display: inline-flex;
   align-items: center;
@@ -227,6 +216,50 @@ section {
   background-color: rgba(0, 0, 0, 0.3);
 }
 /* //Slider section styles */
+/* Menu Card section styles */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.menu_item {
+  width: 300px;
+}
+.menu-img {
+  height: 238px;
+  object-fit: cover;
+}
+.menu .text {
+  width: 100%;
+  background-color: #000137;
+  color: #fff;
+  padding: 1rem 1.1rem;
+}
+.menu .text .title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.menu .text p {
+  width: 243px;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+.menu .text .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  margin: 1rem auto;
+  width: 200px;
+  text-align: center;
+  padding: 0.5rem;
+}
+.price .price_number {
+  font-size: 1rem;
+  font-weight: 700;
+}
+/* //Menu Card section styles */
 /* Javascript styles */
 .show {
   display: block;

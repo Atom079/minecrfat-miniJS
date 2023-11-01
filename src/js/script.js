@@ -1,4 +1,5 @@
 "use strict";
+import clas from "../modules/class";
 import loader from "../modules/loader";
 import slider from "../modules/slider";
 import tab from "../modules/tab";
@@ -19,4 +20,5 @@ window.addEventListener('DOMContentLoaded', ()=>{
         totalCounter: '#total',
         currentCounter: '#current',
     })
+    clas()
 })
