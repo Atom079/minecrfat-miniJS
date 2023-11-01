@@ -16,6 +16,7 @@ function slider({
     current = document.querySelector(currentCounter),
     width = window.getComputedStyle(slidesWrapper).width;
 
+
   sliderField.style.display = "flex";
   sliderField.style.width = 100 * slides.length + "%";
   slidesWrapper.style.overflow = "hidden";
@@ -31,7 +32,6 @@ function slider({
   function deleteStr(str){
     return parseInt(str)
   }
-  console.log(slides.length);
   let slideIndex = 1,
     offset = 0
   next.addEventListener('click', ()=>{
