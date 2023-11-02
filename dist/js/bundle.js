@@ -232,6 +232,65 @@ function tab({
 
 /***/ }),
 
+/***/ "./src/modules/timer.js":
+/*!******************************!*\
+  !*** ./src/modules/timer.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function timer({ clock, deadline }) {
+  function getRemainingTimer(endtime) {
+    let days, hours, minutes, seconds;
+    const timer = Date.parse(endtime) - Date.parse(new Date());
+    if (timer <= 0) {
+      days = 0;
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+    } else {
+      days = Math.floor(timer / (1000 * 60 * 60 * 24));
+      hours = Math.floor((timer / (1000 * 60 * 60)) % 24);
+      minutes = Math.floor((timer / (1000 * 60)) % 60);
+      seconds = Math.floor((timer / 1000) % 60);
+    }
+    return { timer, days, hours, minutes, seconds };
+  }
+  function getZero(num){
+    if (num < 10) {
+        return `0${num}`
+    }else{
+        return num
+    }
+  }
+  function setClock(selector, endtime) {
+    const t = document.querySelector(selector),
+      days = t.querySelector("#days"),
+      hours = t.querySelector("#hours"),
+      minutes = t.querySelector("#minutes"),
+      seconds = t.querySelector("#seconds"),
+      timeInterval = setInterval(updateClock, 1000)
+    updateClock()
+    function updateClock() {
+      const timer = getRemainingTimer(endtime);
+      days.textContent = getZero(timer.days)
+      hours.textContent = getZero(timer.hours)
+      minutes.textContent = getZero(timer.minutes)
+      seconds.textContent = getZero(timer.seconds)
+      if (timer.timer <= 0) {
+        clearInterval(timeInterval)
+      }
+    }
+  }
+  setClock(clock, deadline)
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (timer);
+
+/***/ }),
+
 /***/ "./node_modules/axios/lib/adapters/adapters.js":
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/adapters/adapters.js ***!
@@ -4364,6 +4423,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_loader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/loader */ "./src/modules/loader.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/slider */ "./src/modules/slider.js");
 /* harmony import */ var _modules_tab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/tab */ "./src/modules/tab.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/timer */ "./src/modules/timer.js");
+
 
 
 
@@ -4387,6 +4448,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
         currentCounter: '#current',
     })
     ;(0,_modules_class__WEBPACK_IMPORTED_MODULE_0__["default"])()
+    ;(0,_modules_timer__WEBPACK_IMPORTED_MODULE_4__["default"])({clock: '.timer', deadline: '2024-02-11'})
 })
 })();
 

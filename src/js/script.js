@@ -3,6 +3,7 @@ import clas from "../modules/class";
 import loader from "../modules/loader";
 import slider from "../modules/slider";
 import tab from "../modules/tab";
+import timer from "../modules/timer";
 window.addEventListener('DOMContentLoaded', ()=>{
     loader('.loader')
     tab({
@@ -21,4 +22,5 @@ window.addEventListener('DOMContentLoaded', ()=>{
         currentCounter: '#current',
     })
     clas()
+    timer({clock: '.timer', deadline: '2024-02-11'})
 })

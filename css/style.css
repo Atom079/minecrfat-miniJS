@@ -217,7 +217,7 @@ img {
 }
 /* //Slider section styles */
 /* Menu Card section styles */
-.row {
+.menu .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -242,7 +242,7 @@ img {
 }
 .menu .text p {
   width: 243px;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
 .menu .text .price {
@@ -260,6 +260,45 @@ img {
   font-weight: 700;
 }
 /* //Menu Card section styles */
+/* Timer section styles */
+.timer_content {
+  width: 100%;
+}
+.timer .row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.timer .section-title {
+  text-align: left;
+}
+.timer_item:nth-child(1) {
+  margin-left: 0;
+}
+.timer_item {
+  margin: 1rem;
+}
+.timer_box {
+  padding: 1rem;
+  background-color: #000137;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 9rem;
+  height: 9rem;
+}
+.timer_number {
+  font-size: 70px;
+  font-weight: 700;
+}
+.timer .text {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 60%;
+}
+/* //Timer section styles */
 /* Javascript styles */
 .show {
   display: block;
