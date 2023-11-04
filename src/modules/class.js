@@ -43,9 +43,7 @@ function clas() {
   axios.get("http://localhost:3000/menu").then((data) => {
     data.data.forEach(({ src, altimg, title, descr, price }) => {
       new MenuCard(src, altimg, title, descr, price, ".menu .container .menu_content .row").render();
-        console.log('hi');
     });
   });
-  console.log("hi");
 }
 export default clas;

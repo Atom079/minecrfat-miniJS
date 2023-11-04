@@ -1,6 +1,8 @@
 "use strict";
 import clas from "../modules/class";
+import form from "../modules/form";
 import loader from "../modules/loader";
+import modal from "../modules/modal";
 import slider from "../modules/slider";
 import tab from "../modules/tab";
 import timer from "../modules/timer";
@@ -23,4 +25,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
     })
     clas()
     timer({clock: '.timer', deadline: '2024-02-11'})
+    modal({triggerSelector: '[data-modal]', modalSelector: ".modal"})
+    form('form')
 })
